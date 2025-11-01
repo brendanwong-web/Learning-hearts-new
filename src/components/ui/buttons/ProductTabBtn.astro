@@ -10,9 +10,20 @@ interface Props {
   icon: string;
   accent: string;
 }
+
+let themeClass;
+
+switch(accent) {
+  case 'teal':
+    themeClass = "border-teal-500 text-teal-500"
+    break
+  case 'orange':
+    themeClass = "border-orange-500 text-orange-500"
+    break
+}
 // Define constants for styling classes
 const BUTTON_CLASS =
-  `py-2 px-4 inline-flex items-center gap-x-1 text-xs font-medium rounded-full border bg-white border-${accent}-500 hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700`;
+  `${themeClass} py-2 px-4 inline-flex items-center gap-x-1 text-xs font-medium rounded-full border bg-white hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700`;
 ---
 
 <!-- Tab button element -->
@@ -22,10 +33,10 @@ const BUTTON_CLASS =
   href={url}
   role="tab"
 >
-  <Icon name=`mingcute:${icon}` size="20" class="text-neutral-400 mr-2"/>
+  <Icon name=`mingcute:${icon}` size="20" class="text-inherit mr-2"/>
   <!-- Tab text -->
   <span
-    class=`text-${accent}-500`
+    class=""
   >
     {title}
   </span>
