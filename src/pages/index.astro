@@ -10,14 +10,14 @@ import TestimonialsSection from "@components/sections/testimonials/TestimonialsS
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/lht2.jpg";
-import heroImage2 from "@images/lht9.jpg";
+import heroImage2 from "@images/lht6.jpg";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
 import featureImage from "@images/drawing_t.png";
 import construction from "@images/construction-image.avif";
 import tools from "@images/lht3.jpg";
-import dashboard from "@images/lht1.jpg";
+import dashboard from "@images/lht5.jpg";
 import { partnersData } from "@/data_files/constants";
 import { Icon } from 'astro-icon/components'
 import type { ArrayCardinality } from "astro:schema";
@@ -51,9 +51,9 @@ const avatarSrcs: Array<string> = [
     withReview={false}
     avatars={avatarSrcs}
     reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
-    src={heroImage}
+    src={heroImage2}
     alt="Stack of Learning Hearts product boxes containing assorted hardware tools"
-    src2={heroImage2}
+    src2={heroImage}
     alt2="Stack of Learning Hearts product boxes containing assorted hardware tools"
   >
   <p>
@@ -122,7 +122,7 @@ const avatarSrcs: Array<string> = [
     ]}
     statistics={[
       {
-        count: "20+",
+        count: "20",
         description:
           "Years of offering professional help to clients",
       },
@@ -134,10 +134,10 @@ const avatarSrcs: Array<string> = [
       {
         count: "8",
         description:
-          "masters degrees across Psychology, Educational Therapy, and behavioural studies",
+          "Masters degrees held by our therapists across the areas of Psychology, Educational Therapy, and behavioural studies",
       },
       {
-        count: ">100",
+        count: "100",
         description: "Students who have journeyed with us and found confidence in themselves",
       },
     ]}

@@ -2,6 +2,7 @@
 // Import the required modules
 import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import { Icon } from "astro-icon/components";
 // Extract properties from Astro.props
 const {
   title,
@@ -14,6 +15,7 @@ const {
   imgOneAlt,
   imgTwo,
   imgTwoAlt,
+  isIcon
 } = Astro.props;
 // Define TypeScript interface for the properties
 interface Props {
@@ -27,13 +29,14 @@ interface Props {
   imgOneAlt?: any;
   imgTwo?: any;
   imgTwoAlt?: any;
+  isIcon?: boolean;
 }
 ---
 <!-- Root section of the component -->
 <section
   class="mx-auto max-w-[85rem] items-center gap-6 lg:gap-16 px-4 py-10 sm:px-6 grid grid-cols-1 lg:grid-cols-2 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <div class="order-2 lg:order-1">
+  <div class="order-2 lg:order-none">
     <!-- Title of the section -->
     <h2
       class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl mb-4"
@@ -54,8 +57,7 @@ interface Props {
     {btnExists ? <PrimaryCTA title={btnTitle} url={btnURL} /> : null}
   </div>
   <!-- Conditionally render one or two images based on 'single' property -->
-  {
-    single ? (
+  { !isIcon && single ? (
       <div class="mt-8 ">
         <!-- Single image -->
         <Image
@@ -65,8 +67,8 @@ interface Props {
           format={"avif"}
         />
       </div>
-    ) : (
-      <div class="mt-2 lg:mt-8 grid grid-cols-2 gap-0 lg:gap-6 items-center justify-items-center fill-current">
+    ) : ( !isIcon && 
+      <div class="mt-2 lg:mt-8 grid grid-cols-2 gap-4 lg:gap-6 items-center justify-items-center fill-current">
         <!-- First image in a two-image layout -->
         <Image
           class="w-40 lg:w-full rounded-xl shadow-md"
@@ -84,4 +86,12 @@ interface Props {
       </div>
     )
   }
+  {isIcon && 
+  <div class="mt-2 lg:mt-8 grid grid-cols-2 gap-4 lg:gap-40 items-center w-2/3 mx-auto justify-items-center fill-current">
+
+    <Icon name="bxs:quote-left" class="text-[8rem] lg:text-[14rem] -mt-4 lg:-mt-8 drop-shadow-xl/25"/>
+    <Icon name="bxs:quote-right" class="text-[8rem] lg:text-[14rem] mt-4 lg:mt-8 drop-shadow-xl/25"/>
+  </div>
+  }
+
 </section>

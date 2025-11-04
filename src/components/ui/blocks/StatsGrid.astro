@@ -7,13 +7,32 @@ interface Props {
   description: string;
   index: number;
 }
+let icon;
+switch (index){
+  case 0:
+    icon = "mingcute:right-fill"
+    break
+  case 1:
+    icon = "mingcute:happy-line"
+    break
+  case 2:
+    icon = "mingcute:bulb-line"
+    break
+  case 3:
+    icon = "mingcute:right-fill"
+    break
+}
+
+
 ---
 
 <li class="-m-0.5 flex flex-col p-4 sm:p-8">
   <div
     class="mb-2 flex items-end gap-x-2 text-3xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-5xl"
   >
-    {index === 1 || index === 2 ? <Icon name="mingcute:arrow-up-line" size="20" class="mb-[2px] text-lht"/> : null}
+    {
+      <Icon name={icon} size="30" class="mb-[2px] text-lht"/>
+    }
     {count}
   </div>
   <p class="text-sm text-neutral-600 dark:text-neutral-400 sm:text-base">

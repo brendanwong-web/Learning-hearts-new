@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import mindfulness from "@images/mindfulness2.jpg";
 
 // Define props from Astro
-const { title, subTitle, benefits, img } = Astro.props;
+const { title, subTitle, benefits, img, flipLarge=false } = Astro.props;
 
 // Define TypeScript interface for props
 interface Props {
@@ -11,6 +11,7 @@ interface Props {
   subTitle?: string;
   benefits?: Array<string>;
   img?: any;
+  flipLarge?: boolean;
 }
 
 // Define SVG marker to be used in the component
@@ -22,7 +23,7 @@ const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-widt
 >
   <!-- Grid -->
   <div class="lg:grid lg:grid-cols-12 lg:items-center lg:gap-24">
-    <div class="lg:col-span-6">
+    <div class:list={["lg:col-span-6", {"lg:order-2": flipLarge}]}>
       <Image class="rounded-xl shadow-sm" src={img ? img : mindfulness} alt="Mockup of floating boxes" />
     </div>
     <div class="mt-8 sm:mt-10 lg:col-span-6 lg:mt-0">
