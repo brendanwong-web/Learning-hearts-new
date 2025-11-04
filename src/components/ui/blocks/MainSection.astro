@@ -3,7 +3,7 @@
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 // Destructure the props passed to the Astro component
-const { title, subTitle, btnExists, btnTitle, btnURL, center, padding, id, accent} = Astro.props;
+const { title, subTitle, btnExists, btnTitle, btnURL, center, padding, id, accent, icon="right-fill"} = Astro.props;
 // Define TypeScript interface for props
 interface Props {
   title: string;
@@ -15,6 +15,7 @@ interface Props {
   padding?: boolean;
   id?: string;
   accent?: string;
+  icon?: string;
 }
 
 let sectionClassList = "mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8 2xl:max-w-full"
@@ -60,7 +61,7 @@ if (padding) {
     {
       btnExists ? (
         <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-          <PrimaryCTA title={btnTitle} url={btnURL} icon="whatsapp-line"/>
+          <PrimaryCTA title={btnTitle} url={btnURL} icon={icon}/>
         </div>
       ) : null
     }

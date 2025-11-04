@@ -9,7 +9,7 @@
     "name": "Registration",
     "description": "For all services",
     "price": "$100",
-    "billingFrequency": "SGD / annually",
+    "billingFrequency": "SGD",
     "features": [
       "Payable per subject per timeslot",
       "One Month's fees as deposit",
@@ -19,7 +19,7 @@
 
   "starterKit": {
     "name": "Psychiatric",
-    "description": "For therapy of the mind",
+    "description": "Consultation",
     "price": "$180",
     "billingFrequency": "SGD / hour",
     "features": [
@@ -29,10 +29,10 @@
   },
 
   "professionalToolbox": {
-    "name": "Educational",
-    "description": "For educational therapy",
+    "name": "Educational Therapy",
+    "description": "For students with learning difficulties",
     "price": "Varies",
-    "billingFrequency": "monthly",
+    "billingFrequency": "SGD",
     "features": [
       "Educational therapy for all ages",
       "Varies by learning phase",

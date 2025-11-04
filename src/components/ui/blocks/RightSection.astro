@@ -31,9 +31,9 @@ interface Props {
 ---
 <!-- Root section of the component -->
 <section
-  class="mx-auto max-w-[85rem] items-center gap-16 px-4 py-10 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8 lg:py-14 2xl:max-w-full"
+  class="mx-auto max-w-[85rem] items-center gap-6 lg:gap-16 px-4 py-10 sm:px-6 grid grid-cols-1 lg:grid-cols-2 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <div>
+  <div class="order-2 lg:order-1">
     <!-- Title of the section -->
     <h2
       class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl mb-4"
@@ -66,22 +66,20 @@ interface Props {
         />
       </div>
     ) : (
-      <div class="mt-8 grid grid-cols-2 gap-0 lg:gap-6 justify-items-center fill-current">
+      <div class="mt-2 lg:mt-8 grid grid-cols-2 gap-0 lg:gap-6 items-center justify-items-center fill-current">
         <!-- First image in a two-image layout -->
         <Image
-          class="w-36 lg:w-full rounded-xl "
+          class="w-40 lg:w-full rounded-xl shadow-md"
           src={imgOne}
           alt={imgOneAlt}
           draggable={"false"}
-          format={"avif"}
         />
         <!-- Second image in a two-image layout -->
         <Image
-          class="mt-8 w-36 lg:w-full rounded-xl lg:mt-10 "
+          class="w-40 lg:w-full rounded-xl lg:mt-10 shadow-md"
           src={imgTwo}
           alt={imgTwoAlt}
           draggable={"false"}
-          format={"avif"}
         />
       </div>
     )
