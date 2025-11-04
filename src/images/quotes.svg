@@ -4,7 +4,14 @@
 <svg fill="" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 width="800px" height="800px" viewBox="0 0 351.128 351.128"
 	 xml:space="preserve">
-<g>
+	   <defs>
+    <filter id="f3" width="120" height="120">
+      <feOffset in="SourceAlpha" dx="20" dy="20" />
+      <feGaussianBlur stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" />
+    </filter>
+  </defs>
+<g filter="url(#f3)">
 	<path d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836
 		c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628
 		C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764
