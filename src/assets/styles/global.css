@@ -167,13 +167,13 @@
 
   --animate-scroll: scroll 10s linear infinite;
   @keyframes scroll {
-    0% {
-      transform: translateX(0%);
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(calc(-100% - var(--spacing)*12));;
     }
-    100% {
-      transform: translateX(calc(-100% - var(--spacing)*12));;
   }
-}
 }
 
 /*

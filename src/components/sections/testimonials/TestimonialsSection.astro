@@ -59,7 +59,10 @@ type StatProps = {
         <TestimonialItem content={testimonial.content} author={testimonial.author} role={testimonial.role}/>
         ))
       }
-      
+      <div class="text-center">
+
+        <SecondaryCTA title="View all testimonials" url="/testimonials" class="w-full lg:w-fit lg:mt-8"/>
+      </div>
     </div>
 { statistics &&
     <div class="mt-10 lg:col-span-6 lg:col-end-13 lg:mt-0">
@@ -76,7 +79,7 @@ type StatProps = {
         </ul>
       </div>
 
-<!-- <SecondaryCTA title="View all testimonials" url="/testimonials" />  -->
+
     </div>
   }
 
