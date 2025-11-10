@@ -8,7 +8,7 @@
   "registration": {
     "name": "Registration",
     "description": "For all services",
-    "price": "$100",
+    "price": "$180",
     "billingFrequency": "SGD",
     "features": [
       "Payable per subject per timeslot",
@@ -18,9 +18,9 @@
   },
 
   "starterKit": {
-    "name": "Psychiatric",
-    "description": "Consultation",
-    "price": "$180",
+    "name": "Counselling / Psychotherapy",
+    "description": "Consultation session",
+    "price": "$190",
     "billingFrequency": "SGD / hour",
     "features": [
       "Fee for initial consultation",
