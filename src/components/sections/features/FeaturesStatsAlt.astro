@@ -22,15 +22,15 @@ const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-widt
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
   <!-- Grid -->
-  <div class="lg:grid lg:grid-cols-12 lg:items-center lg:gap-24">
-    <div class:list={["lg:col-span-6", {"lg:order-2": flipLarge}]}>
+  <div class="lg:grid lg:grid-cols-10 lg:items-center lg:gap-16">
+    <div class:list={["lg:col-span-5", {"lg:order-2": flipLarge}]}>
       <Image class="rounded-xl shadow-sm" src={img ? img : mindfulness} alt="Mockup of floating boxes" />
     </div>
-    <div class="mt-8 sm:mt-10 lg:col-span-6 lg:mt-0">
+    <div class="mt-8 sm:mt-10 lg:col-span-5 lg:col-start-6 lg:mt-0">
       <div class="space-y-6 sm:space-y-8">
         <div class="space-y-2 md:space-y-4">
           <h2
-            class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
+            class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl font-serif-title"
           >
             {title}
           </h2>

@@ -26,9 +26,9 @@ const { title, subTitle, src, alt, features, id } = Astro.props;
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full" id={id}
 >
   <!-- Block to display the feature image -->
-  <div class="relative mb-6 overflow-hidden md:mb-8">
-    {
-      src && alt && (
+  {
+    src && alt && (
+        <div class="relative mb-6 overflow-hidden md:mb-8">
         <Image
           src={src}
           alt={alt}
@@ -37,14 +37,14 @@ const { title, subTitle, src, alt, features, id } = Astro.props;
           format={"avif"}
           loading={"eager"}
         />
+      </div>
       )
     }
-  </div>
 
   <!-- Displaying the main content consisting of title, subtitle, and several `IconBlock` components -->
-  <div class="mt-5 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
+  <div class="grid gap-8 lg:grid-cols-3 lg:gap-12">
     <!-- Block for title and subtitle -->
-    <div class="lg:col-span-1 mb-4 max-w-prose text-pretty font-normal text-neutral-600 dark:text-neutral-400">
+    <div class="lg:col-span-1 mb-4 max-w-prose text-pretty font-normal text-neutral-600 dark:text-neutral-400 lg:mt-4">
       <!-- Rendering title -->
       <h2
         class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl xl:text-5xl"
