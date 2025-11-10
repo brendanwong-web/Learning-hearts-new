@@ -187,6 +187,13 @@
   src: url("../KGMissKindergarten.ttf");
 }
 
+@font-face {
+  font-family: Domine;
+  font-stretch: 75% 200%; /* Note that font-stretch is a % of normal width */
+  font-style: normal; /* See note below */
+  font-weight: 300 700;
+  src: url(../Domine-VariableFont_wght.ttf) format('ttf');
+}
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
