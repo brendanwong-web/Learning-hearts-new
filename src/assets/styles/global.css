@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet');
 @import 'tailwindcss';
 @import 'preline/variants.css';
 @plugin '@tailwindcss/forms';
