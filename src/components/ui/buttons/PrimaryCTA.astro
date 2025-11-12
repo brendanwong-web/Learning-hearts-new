@@ -11,10 +11,10 @@ interface Props {
 }
 // Define CSS classes for styling the button
 const baseClasses =
-  "group mt-2 lg:mt-4 inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-bold text-neutral-50 ring-zinc-500 transition duration-300 focus-visible:ring-3 outline-hidden";
+  "group mt-2 lg:mt-4 inline-flex items-center justify-center gap-x-2 rounded-lg px-2 text-md font-bold text-neutral-800 ring-zinc-500 transition duration-300 focus-visible:ring-3 outline-hidden";
 const borderClasses = "border border-transparent";
 const bgColorClasses =
-  "bg-cyan-500 hover:bg-cyan-500 active:bg-cyan-500 dark:focus:outline-hidden";
+  "relative after:w-[100%] after:h-2/3 after:bg-cyan-200/80 after:rounded-xs after:-skew-x-4 after:absolute after:left-0 after:bottom-0 after:-z-1";
 const disableClasses = "disabled:pointer-events-none disabled:opacity-50";
 const fontSizeClasses = "2xl:text-base font-kgmiss tracking-wide";
 const ringClasses = "dark:ring-zinc-200";
@@ -23,11 +23,14 @@ let iconName = "mingcute:" + (icon? icon : 'right-fill')
 
 <!-- Link styled as a button, with dynamic title, URL, and optional arrow -->
 <a
-  class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${disableClasses} ${fontSizeClasses} ${ringClasses}`}
+  class={`${baseClasses} ${borderClasses} ${disableClasses} ${fontSizeClasses} ${ringClasses}`}
   href={url}
 >
-  {title}
+  <span class=`${bgColorClasses} px-2`>
+    {title}
+
+  </span>
+  {noArrow ? null : <Icon name={iconName} class='-mx-2 group-hover:translate-x-1 transition-transform'/>}
   <!-- Display the arrow based on the 'noArrow' property -->
 
-  {noArrow ? null : <Icon name={iconName} />}
 </a>

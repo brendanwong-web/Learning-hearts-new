@@ -1,20 +1,25 @@
 ---
 // Destructure the properties from Astro.props
-const { title, url, class: className, ...rest } = Astro.props;
+const { title, url, icon, class: className, noArrow, ...rest } = Astro.props;
+import { Icon } from 'astro-icon/components'
 
 // Define TypeScript interface for the properties
 interface Props {
   title?: string;
   url?: string;
   class?: string;
+  noArrow?: boolean;
+  icon?: string;
 }
+
+let iconName = "mingcute:" + (icon? icon : 'right-fill')
 // Define CSS classes for the hyperlink button
 const baseClasses =
-  "inline-flex items-center mt-4 justify-center gap-x-2 rounded-lg px-4 py-3 text-center text-sm font-medium text-neutral-600 shadow-xs outline-hidden ring-zinc-500 focus-visible:ring-3 transition duration-300";
-const borderClasses = "border border-neutral-200";
-const bgColorClasses = "bg-neutral-300";
+  "group mt-2 lg:mt-4 inline-flex items-center justify-center gap-x-2 rounded-lg px-2 text-md font-bold text-neutral-800 ring-zinc-500 transition duration-300 focus-visible:ring-3 outline-hidden";
+const borderClasses = "";
+const bgColorClasses = "relative after:w-full after:h-2/3 after:bg-neutral-200/80 after:rounded-xs after:-skew-x-4 after:absolute after:left-0 after:bottom-0 after:-z-1";
 const hoverClasses =
-  "hover:bg-neutral-400/50 hover:text-neutral-600 active:text-neutral-700";
+  "hover:after:translate-y-1 after:transition-transform hover:after:bg-neutral-200 active:text-neutral-700";
 const disableClasses = "disabled:pointer-events-none disabled:opacity-50";
 const fontSizeClasses = "2xl:text-base font-kgmiss tracking-wide";
 const ringClasses = "ring-zinc-500";
@@ -25,8 +30,11 @@ const darkClasses =
 
 <!-- Styled hyperlink -->
 <a
-  class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${hoverClasses} ${disableClasses} ${fontSizeClasses} ${ringClasses} ${darkClasses} ${className}`}
+  class={`${baseClasses} ${borderClasses}  ${disableClasses} ${fontSizeClasses} ${ringClasses} ${darkClasses} ${className}`}
   href={url}
 >
-  {title}
+  <span class=`${bgColorClasses} px-2 ${hoverClasses}`>
+    {title}
+  </span>
+  {noArrow ? null : <Icon name={iconName} class="-mx-2 mt-1"/>}
 </a>
