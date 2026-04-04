@@ -1,42 +1,52 @@
 {
-  "title": "Simple, Transparent Pricing",
-  "subTitle": "Choose the type of therapy you require",
-  "badge": "Start Here",
+  "title": "Onboarding Protocol",
+  "subTitle": "Following the inquiry via Whatsapp or Email, the following procedure for onboarding of educational therapy will take place:",
+  "badge": "1",
   "thirdOption": "Looking for other Courses?",
   "btnText": "View all courses",
   "btnUrl": "/programmes",
   "registration": {
-    "name": "Registration",
+    "name": "Initial consultation",
     "description": "For all services",
-    "price": "$180",
+    "price": "$270",
     "billingFrequency": "SGD",
     "features": [
-      "Payable per subject per timeslot",
-      "One Month's fees as deposit",
-      "Refundable, when T&Cs are met"
+      "Min. 1.5 hrs",
+      "Involves parents only"
     ]
   },
 
   "starterKit": {
-    "name": "Counselling / Psychotherapy",
-    "description": "Consultation session",
-    "price": "$190",
-    "billingFrequency": "SGD / hour",
+    "name": "Profiling exercise",
+    "description": "counselling",
+    "price": "$450",
+    "billingFrequency": "SGD",
     "features": [
-      "Fee for initial consultation",
-      "Depression, anxiety, and more"
+      "Creation of detailed learners profile",
+      "Establishment of startpoint and tailored teaching strategy",
+      "Payable per subject"
     ]
   },
 
   "professionalToolbox": {
     "name": "Educational Therapy",
     "description": "For students with learning difficulties",
-    "price": "Varies",
+    "price": "from $180",
     "billingFrequency": "SGD",
     "features": [
-      "Educational therapy for all ages",
-      "Varies by learning phase",
-      "Paid at start of quarter"
+      "$180 registration fee",
+      "Actual therapy fees vary by learning stage",
+      "One month's fees deposit payable upfront, refundable when T&Cs are met"
+    ]
+  },
+  "counselling": {
+    "name": "Educational Therapy",
+    "description": "For students with learning difficulties",
+    "price": "$200",
+    "billingFrequency": "SGD",
+    "features": [
+      "Per hour, payable monthly",
+      "No initial consultation"
     ]
   }
 
