@@ -3,8 +3,11 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import MainSection from "@components/ui/blocks/MainSection.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
 import pricing from "@data/pricing.json";
+
 // Import necessary images
+import exams from "@images/exams.jpg";
 
 import { SITE } from "@data/constants";
 import { Icon } from 'astro-icon/components'
@@ -63,6 +66,17 @@ const ogTitle = "Expert Therapy Services | Learning Hearts";
     btnURL="/contact"
   />
 
+<FeaturesStatsAlt
+title="Exam Preparation"
+subTitle="We help all types of students prepare for their respective exams:"
+img={exams}
+benefits={[
+  "PSLE",
+  "O-Levels",
+  "iGCSE",
+  "Skills support for university",
+]}
+/>
 <PricingSection 
   pricing={pricing} 
 />
