@@ -2,6 +2,8 @@
 // Import necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import MainSection from "@components/ui/blocks/MainSection.astro";
+import YoutubeVideo from "@components/Youtube.astro"
+import TwoColumn from "@components/sections/misc/TwoColumnSection.astro";
 import LeftSection from "@components/ui/blocks/LeftSection.astro";
 import SecondaryCTA from "@/components/ui/buttons/SecondaryCTA.astro";
 import ProductTabBtn from "@/components/ui/buttons/ProductTabBtn.astro";
@@ -145,6 +147,28 @@ benefits={[
 ]}
 />
 
+
+<MainSection
+title="Video Gallery"
+subTitle="Mindfulness in the context of modern society"
+btnExists={false}
+center={true}
+btnTitle="Schedule a Consultation"
+btnURL="#"
+padding={false}
+/>
+<div
+    class="grid grid-cols-1 md:grid-cols-2 items-start justify-start gap-y-2 md:flex-row sm:gap-x-6 sm:gap-y-0 lg:gap-x-12"
+  >
+    <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+        <YoutubeVideo src="https://youtu.be/CyiwVwwjFtQ?si=5QeNRHZHAv3CRQtv" />
+    </div>
+    <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+      <YoutubeVideo src="https://youtu.be/GszmHs8qPFE?si=tPY1AY3aZIem1D73" />
+    </div>
+  </div>
+
+
 <MainSection
 title="Testimonials"
 subTitle="Hear from some of our course attendees"
@@ -154,6 +178,7 @@ btnTitle="Schedule a Consultation"
 btnURL="#"
 padding={false}
 />
+
 <TestimonialsSectionAlt title="test" testimonials={testimonialsMindfulness} />
 
 <Details
