@@ -2,12 +2,6 @@
 // Define props from Astro
 const { title, subTitle } = Astro.props;
 
-import school1 from "@images/drawing_t.png";
-import school2 from "@images/drawing_t.png";
-import school3 from "@images/drawing_t.png";
-import school4 from "@images/drawing_t.png";
-import school5 from "@images/drawing_t.png";
-import school6 from "@images/drawing_t.png";
 import Image from 'astro/components/Image.astro';
 import type { ImageMetadata } from 'astro';
 
@@ -17,7 +11,7 @@ const resolvedImages = await Promise.all(
     Object.values(images).map((image) => image().then((mod) => mod.default))
   );
 
-
+console.log(resolvedImages)
 
 // Define TypeScript interface for props
 interface Props {
